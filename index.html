@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>2014 Community Report - WellStar Health System</title>
+        <meta name="description" content="We believe we’re here to do more than treat sick patients: we’re here to keep our community healthy. Join us in making a difference.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta property="og:title" content="WellStar 2014 Community Report" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.wellstar.org/community" />
+        <meta property="og:image" content="https://www.wellstar.org/community/images/image-hero.jpg" />
+        <meta property="og:description" content="We believe we’re here to do more than treat sick patients: we’re here to keep our community healthy. Join us in making a difference." /> 
+        <meta property="og:site_name" content="WellStar" />
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@wellstarhealth">
+        <meta name="twitter:title" content="WellStar 2014 Community Report">
+        <meta name="twitter:description" content="WellStar's 2014 Community Benefit Report">
+        <meta name="twitter:creator" content="@wellstarhealth">
+        <meta name="twitter:image" content="https://www.wellstar.org/community/images/image-hero.jpg">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="scripts/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.maphilight.min.js"></script>
+        <script type="text/javascript" src="scripts/chart.min.js"></script>
+        <script type="text/javascript" src="scripts/validate.min.js"></script>
+        <script type="text/javascript" src="scripts/cbr.js"></script>
+        <!--[if lt IE 9]>
+        	<script type="text/javascript" src="scripts/excanvas.js"></script>
+            <script type="text/javascript" src="scripts/html5shiv.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-9373927-4']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+        <script>
+			$(document).ready(function () {
+				function sendEmail() {
+					$.ajax({
+						type: "POST",
+						url: "Default.aspx?email=" + $("#email").val(),
+						contentType: "application/json; charset=utf-8",
+						dataType: 'html',
+						success: function successHandler(data, textStatus, jqXHR) {
+							//alert("Email Sent");
+							$("#email").val("");
+							$("#submit").prop('value', 'Email Sent'); 
+							$("#submit").prop('disabled', true); 
+						},
+						async: false,
+						error: function (request, status, error) {
+							//Error occurred, re-enable the button
+							$("#submit").prop('value', 'Error - Please try again later'); 
+							$("#submit").prop('disabled', false);
+						}
+					});
+					$('#submit').click(function () {
+						$("#submit").attr('value', 'Submitting...'); 
+						$("#submit").attr('disabled', true);
+					});
+				}
+			});
+        </script>
+    </head>
+	<body>   
+        <div id="notification-area">
+        	<a href="https://ssl.4agoodcause.com/wellstar/donate1.aspx"  target="_blank">
+                <img src="images/icon-donate.png" >
+                <p>Please click here to make a donation</p>
+            </a>
+            <img id="notification-close" class="btn-close" src="images/btn-close.png">
+        </div>
+   
+        <div id="site-wrapper">
+            <div id="hero">
+                <img class="logo-wellstar no-fade" src="images/logo-wellstar.png" />
+                <div class="site-title">
+                    <h1>Breaking New Ground</h1>
+                    <p>2014 Community Report</p>
+                </div>
+                <img class="no-fade" src="images/image-hero.jpg" />
+            </div>
+
+            <div id="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li style="margin-top: 0;">
+                            <a href="#about" data-scroll="about">About</a>
+                            <ul class="displayBlock">
+                                <li><a href="#who-we-are" data-scroll="who-we-are">Who We Are</a></li>
+                                <li><a href="#where-we-are" data-scroll="where-we-are">Where We Are</a></li>
+                            </ul>
+                        </li>              
+                        <li>
+                            <a href="#growth-and-achievements" data-scroll="growth-and-achievements">Growth & Achievements</a>
+                            <ul>
+                                <li><a href="#mayo-clinic" data-scroll="mayo-clinic">Mayo Clinic<br>Care Network</a></li>
+                                <li><a href="#paulding-hospital" data-scroll="paulding-hospital">Paulding Hospital</a></li>
+                                <li><a href="#kennestone-regional" data-scroll="kennestone-regional">Kennestone Regional Medical Center</a></li>
+                                <li><a href="#pediatric-center" data-scroll="pediatric-center">Pediatric Center on Barrett Parkway</a></li>
+                                <li><a href="#east-cobb-health-park" data-scroll="east-cobb-health-park">East Cobb Health<br>Park</a></li>
+                            	<li><a href="#breakthroughs" data-scroll="breakthroughs">Other Breakthroughs</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#by-the-numbers" data-scroll="by-the-numbers">By The Numbers</a>
+                            <ul>
+                                <li><a href="#community-outreach" data-scroll="community-outreach">Community Outreach</a></li>
+                                <li><a href="#care-and-stewardship" data-scroll="care-and-stewardship">Care & Stewardship</a></li>
+                                <li><a href="#audited-financials" data-scroll="audited-financials">Audited Financials</a></li>
+                            </ul>
+                        </li>                       
+                        <li>
+                            <a href="#patients" data-scroll="our-patients">Our Patients</a>
+                            <ul>
+                                <!-- <li><a href="#trip-whitley" data-scroll="patient-story-1">Trip Whitley's Story</a></li> -->
+                                <li><a href="#gina-manley" data-scroll="patient-story-2">Gina Manley's Story</a></li>
+                                <li><a href="#ross-shaffer" data-scroll="patient-story-3">Ross Shaffer's Story</a></li>
+                                <li><a href="#the-larsons" data-scroll="patient-story-4">The Larsons' Story</a></li>
+                                <li><a href="#jesse-gunnels" data-scroll="patient-story-5">Jesse Gunnels' Story</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#leadership" data-scroll="leadership">Leadership</a>
+                            <ul>
+                                <li><a href="#our-board" data-scroll="our-board">Our Board</a></li>
+                                <li><a href="#senior-leaders" data-scroll="senior-leaders">Our Senior Leaders</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#foundation" data-scroll="foundation">Foundation</a>
+                            <ul>
+                                <li><a href="#john-cothran" data-scroll="patient-testimonial">John Cothran's Story</a></li>
+                                <li><a href="#lifetime-donors" data-scroll="lifetime-donors">Lifetime Donors</a></li>
+                                <li><a href="#generous-donors" data-scroll="generous-donors">Generous Donors</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#get-involved" data-scroll="get-involved">Get Involved</a>
+                            <ul>
+                                <li><a href="#donate" data-scroll="donate">Donate</a></li>
+                                <li><a href="#follow" data-scroll="follow">Follow</a></li>
+                                <li><a href="#spread-the-word" data-scroll="share">Spread the Word</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>      
+            </div>
+        
+            <div id="main">        
+                <section id="overview" data-anchor="about">
+                    <h1>About</h1>
+                    <p class="heading-quote">“We believe that healthcare is a choice. We want members of the community to feel good about choosing WellStar at each stage of their lives.”</p> 
+                    
+                    <div class="video-container" onclick="showNotificationArea();">
+                        <iframe width="830" height="467" src="https://www.youtube.com/embed/LJMiKviu6Hk?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="subsection" data-anchor="who-we-are">
+                        <h2>WellStar Broke New Ground In Many Ways This Year</h2>
+                        <p>We grew bigger, yes, but most importantly, better. More dedicated to meeting the needs of the 1.4 million people we serve. More committed to innovation and partnerships that help us provide world-class healthcare close to home.
+                        <br><br>Our most visible achievement was opening the replacement WellStar Paulding Hospital, a bright, healing environment where cutting-edge technology enhances patient safety and reduces environmental impact.
+                        <br><br>The new WellStar Pediatric Center offers high-quality, child-centered services with convenient hours and pediatric specialists on site. From the doctors to the design, it is solely dedicated to the well-being of children.
+                        <br><br>Our second Health Park, in East Cobb, opened its doors in September, a single source of urgent and primary care and other specialty services in an easy-to-access neighborhood setting. In response to the success of the Acworth and East Cobb locations, we’re bringing Health Parks to Cherokee County and Vinings.
+                        <br><br>In some cases “groundbreaking” did not result in new buildings, but in valuable new partnerships. WellStar has partnered with Piedmont Healthcare to create a new insurance company, called Piedmont WellStar HealthPlans. The plans feature disease prevention and affordable care management for members of the community and for team members of both health systems. As a member of the Mayo Clinic Care Network, WellStar physicians have the ability to consult with Mayo specialists, bringing extraordinary medical insight to complex cases at no cost to our patients. We earned a place on the FORTUNE 100 Best Companies to Work For® list. And, through our Epic® system, WellStar Connect, we advanced our capability in electronic medical recordkeeping with the goal of better care through more efficient communication.</p>
+                        <div class="photo-inset">
+                        	<img class="no-fade" src="images/photo-saunders-inset.jpg" alt="Candice Saunders">
+							<p>Candice Saunders</p>
+                        </div>
+                        <p><br>Our System took an important step toward building our future with the announcement that President and Chief Operating Officer Candice Saunders will become WellStar President and CEO in January 2016.
+                        <br><br>The result of all these efforts is a community that grows healthier one neighbor at a time. In the pages that follow, you’ll meet one of those neighbors and learn how WellStar helped change the course of a life.
+                        <br><br>As an employer of more than 13,000, we boosted the health of our economy as well this year. A strong balance sheet and a robust Foundation permit us to reinvest every dollar into our mission. We will continue to thoughtfully address challenges wherever they arise, never forgetting our mission—to deliver world-class care that makes our community a healthier, better place to live. 
+                        <br><br>With your support we look forward to breaking more new ground in the future.
+                        <br><br>In good health and gratitude,</p>
+                        <img src="images/photo-overview-ceo.jpg" alt="Reynold Jennings and Janie Maddox">
+                        <div class="signature-container">
+                            <div class="signature">
+                                <img class="no-fade" src="images/signature-reynold.jpg" alt="Signature">
+                                <h3>Reynold J. Jennings</h3>
+                                <p>Chief Executive Officer<br>WellStar Health System</p>
+                            </div>
+                            <div class="signature">
+                                <img class="no-fade" src="images/signature-maddox.jpg" alt="Signature">
+                                <h3>Janie Maddox</h3>
+                                <p>Chair, Board of Trustees<br>WellStar Health System</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="where-we-are">
+                        <h2 style="margin-bottom: 55px;">Where We Are</h2>
+                        <div style="position:relative;">
+                            <img src="images/countymap.png" id="county-map" class="no-fade" style="width:830px;height:641px;" usemap="#county-image-map" />
+                            <map name="county-image-map" id="county-image-map">
+                                <area id="bartow" alt="Bartow County" title="Bartow County" href="#" onclick="return false;" shape="poly" coords="240,15,383,16,392,4,447,7,443,216,379,224,269,222,212,219,204,195,204,127,219,118,225,43,238,36" style="outline:none;" target="_self" data-maphilight='BartCo' />
+                                <area id="cherokee" alt="Cherokee County" title="Cherokee County" href="#" onclick="return false;" shape="poly" coords="443,217,448,6,465,7,469,27,640,27,641,164,632,166,624,162,613,155,604,153,599,153,586,158,575,169,568,181,563,197,560,201,550,198,541,200,534,207,528,219,522,222" style="outline:none;" target="_self" data-maphilight='CherCo' />
+                                <area id="paulding" alt="Paulding County" title="Paulding County" href="#" onclick="return false;" shape="poly" coords="271,223,377,224,377,294,385,299,385,419,268,416,206,381,203,343,203,295,242,294" style="outline:none;" target="_self" data-maphilight='PaulCo' />
+                                <area id="cobb" alt="Cobb County" title="Cobb County" href="#" onclick="return false;" shape="poly" coords="387,401,384,301,377,292,377,222,444,219,528,222,531,236,540,251,551,262,559,280,558,297,540,319,535,339,528,360,527,379,503,405,487,421,474,434,459,438,436,402" style="outline:none;" target="_self" data-maphilight='CobbCo' />
+                                <area id="douglas" alt="Douglas County" title="Douglas County" href="#" onclick="return false;" shape="poly" coords="386,400,437,402,459,435,457,448,447,460,433,473,420,492,399,511,364,524,332,540,306,559,265,555,267,416,372,418,385,418,389,399" style="outline:none;" target="_self" data-maphilight='DougCo' />
+                            </map>
+                            <div class="map-info-panel" id="cherokee-info-panel">
+                                <h2>Cherokee County</h2>
+                                <img src="images/icon-close.png" alt="Close" class="no-fade">
+                                <h3>1 Urgent Care Center</h3>
+                                <p>Towne Lake</p>
+                                <h3>1 Imaging Center</h3>
+                                <p>Woodstock</p>
+                                <h3>1 Health Park</h3>
+                                <p>Coming Soon!</p>
+                                <h3>11 WellStar Medical Group Locations</h3>
+                            </div>
+                            <div class="map-info-panel" id="cobb-info-panel">
+                                <img src="images/icon-close.png" alt="Close" class="no-fade">
+                                <h2>Cobb County</h2>
+                                <h3>3 Hospitals</h3>
+                                <p>WellStar Cobb - WellStar Kennestone - WellStar Windy Hill</p>
+                                <h3>7 Urgent Care Centers</h3>
+                                <p>Acworth - Cooper Lake - Delk Road - East Cobb<br>Kennesaw - Marietta - Shallowford</p>
+                                <h3>11 Imaging Centers</h3>
+                                <p>Acworth - Austell - East Cobb - Kennesaw - Marietta</p>
+                                <h3>2 Health Parks</h3>
+                                <p>Acworth - East Cobb - Vinings (coming 2016!)</p>
+                                <h3>1 Pediatric Center</h3>
+                                <p>Kennesaw</p>
+                                <h3>2 Hospice Facilities</h3>
+                                <p>Tranquility at Cobb - Tranquility at Kennesaw Mountain</p>
+                                <h3>116 WellStar Medical Group Locations</h3>
+                            </div>
+                            <div class="map-info-panel" id="douglas-info-panel">
+                                <img src="images/icon-close.png" alt="Close" class="no-fade">
+                                <h2>Douglas County</h2>
+                                <h3>1 Hospital</h3>
+                                <p>WellStar Douglas</p>
+                                <h3>2 Imaging Centers</h3>
+                                <p>Douglasville</p>
+                                <h3>12 WellStar Medical Group Locations</h3>
+                            </div>
+                            <div class="map-info-panel" id="paulding-info-panel">
+                                <img src="images/icon-close.png" alt="Close" class="no-fade">
+                                <h2>Paulding County</h2>
+                                <h3>1 Hospital</h3>
+                                <p>WellStar Paulding</p>
+                                <h3>2 Imaging Centers</h3>
+                                <p>Hiram</p>
+                                <h3>1 Nursing and Rehabilitation Center</h3>
+                                <p>Paulding Nursing and Rehabilitation Center</p>
+                                <h3>12 WellStar Medical Group Locations</h3>
+                            </div>
+                            <div class="map-info-panel" id="bartow-info-panel">
+                                <img src="images/icon-close.png" alt="Close" class="no-fade">
+                                <h2>Bartow County</h2>
+                                <h3>2 WellStar Medical Group Locations</h3>
+                                <p>and growing!</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </section>
+                
+                    
+                    
+                <section id="articles" data-anchor="growth-and-achievements">
+                    <h1>Growth and<br>Achievements</h1>
+                    <p class="heading-quote">“An employer of choice, a change agent for healthcare.”</p> 
+            
+            		<div class="subsection" data-anchor="mayo-clinic">
+                        <img src="images/image-mayo-hero.jpg" alt="Mayo Clinic" class="img-margin">
+                        <div class="article-title">
+                            <h2>WellStar Patients Benefit from Mayo Collaboration</h2>
+                        </div>
+                        <p>In February 2014 WellStar Health System joined the prestigious Mayo Clinic Care Network. The arrangement gives WellStar physicians the ability to consult with Mayo specialists, bringing top medical insight to complex medical cases at no cost to our patients. WellStar is the largest member of the Mayo Clinic Care Network in the southeast and the only member in metro Atlanta.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/PLmhn6on8Vs?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>Physicians from WellStar and Mayo Clinic use a digital technology tool known as eConsult to work together and share the latest medical information. The collaboration saves metro Atlanta patients time, money and travel while providing expertise from leading medical specialists.
+                        <br><br>A web-based knowledge resource called AskMayoExpert is a state-of-the-art tool that offers access to Mayo Clinic’s knowledge in disease management, clinical care guidelines, treatment recommendations and reference materials for a variety of medical conditions.</p>
+                        <p>Most of the collaboration to date has been around complex cancer cases. WellStar patients have also benefited from Mayo expertise in cardiology, neurology, pediatrics and other specialties.
+						<br><br>WellStar CEO Reynold Jennings noted, “By working with Mayo, we are transforming healthcare in Northwest Georgia and metro Atlanta and furthering our mission of providing work-class healthcare.”</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="paulding-hospital">
+                        <img src="images/image-paulding-hero.jpg" alt="Paulding Hospital" class="img-margin">
+                        <div class="article-title">
+                            <h2 style="padding-top: 32px;">For the future of Paulding</h2>
+                        </div>
+                        <p>At midnight on April 1, 2014, WellStar Paulding Hospital went dark for the first time since its opening in 1958. At the same moment, the new WellStar Paulding Hospital whirred to life, bringing world-class healthcare to one of Georgia’s fastest-growing communities.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/e6yu67_w4LM?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>WellStar Paulding is not only the newest hospital in the Atlanta area, it also incorporates innovative design to maximize patient healing, family comfort and the safety of all who work, visit and are treated there.
+                        <br><br>Located in Hiram, the hospital opened with 56 beds and the capacity to expand to 112. There are four surgical suites and 40 emergency exam rooms, plus a dedicated Pediatric Emergency Department. The hospital brought 500 new jobs to the community.</p>
+                        <img src="images/image-paulding.jpg" alt="Paulding Hospital">
+                        <div class="article-quote quote-orange"><p>“The presence of family members is a key element in patient healing. We designed the hospital to keep loved ones close.”</p></div>
+                        <p>Behind the warm lighting and comfortable décor is cutting-edge technology, some of it unique to the Atlanta area. In place of the traditional central nursing stations, caregivers work close to patient rooms. Medical staff wear tiny electronic chips that track handwashing. And germ-fighting UV light air handlers filter the air as it enters the building. A high-efficiency geothermal heat pump system is expected to save 30 percent in energy costs.</p>
+                        <img src="images/image-paulding-interior.jpg" alt="Paulding Interior">
+                        <p>The welcoming crowd of over 10,000 on hand for the opening celebration reflected the depth of community support for the new hospital. Those present included relatives of the founders of the original Paulding Hospital, a testament to the continuity of our mission. Many in the community have expressed support through their generous donations to name spaces at the new WellStar Paulding Hospital, in honor of the lives of loved ones.</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="kennestone-regional">
+                        <img src="images/image-kennestone-hero.jpg" alt="Kennestone Regional" class="img-margin">
+                        <div class="article-title">
+                            <h2>The Beat Goes on at Kennestone Hospital</h2>
+                        </div>
+                        <p>At WellStar Kennestone Hospital, it’s been a year of innovation and recognition in cardiac care. The hospital was honored with Consumer Reports’ highest rating for coronary artery bypass surgery. Kennestone was the only Georgia hospital to receive that distinction. The hospital also received an STS “3-star Quality” rating out of a possible 3 stars for our CABG surgery.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/WbVcvOVmDlU?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>This year also marked the 100th TAVR procedure performed at Kennestone. TAVR is a minimally invasive surgical procedure to repair, rather than replace, damaged aortic valves. The procedure is for patients considered at high-risk for traditional valve replacement. The replacement expands once in place and actually moves the damaged valve out of the way.
+                        <br><br>Finally this year, Kennestone became the only hospital in Georgia offering the Convergent Approach for patients with persistent atrial fibrillation (irregular heartbeat). Two specialists, a cardiac surgeon and an electrophysiologist, simultaneously perform this minimally invasive procedure.
+                        <br><br>Without a chest incision, the surgeon uses focused heat (radio frequency) to produce scar tissue on the heart that blocks abnormal electrical signals. The electrophysiologist confirms that the abnormal electrical signals have been interrupted and ablates the pulmonary veins within the heart, therefore, converging on the abnormal tissue.</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="pediatric-center">
+                        <img src="images/image-pediatric-hero.jpg" alt="Pediatric Center" class="img-margin">
+                        <div class="article-title">
+                            <h2>Improving the Health of the Youngest Among Us</h2>
+                        </div>
+                        <p>Children are not small adults. They need specialized healthcare that meets their physical and emotional needs. The WellStar Pediatric Center in Kennesaw, which opened July 7, offers high-quality, child-centered services with convenient hours and pediatric specialists on site.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/mybeykcsGRo?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>The center makes life easier for families in Northwest Georgia who in the past have had to travel long distances for pediatric care. The Pediatric Center gives them access to quality healthcare and a wide range of services close to home.</p>
+                        <img src="images/image-pediatric-in.jpg" alt="Pediatric Center Interior">
+                        <p>Visitors of all ages appreciate the child-friendly surroundings and nautical theme, prompt appointments and quick lab results. Specialists include radiologists, pediatricians and physical therapists. Trained support staff help guide patients and parents through testing and procedures. Other convenient features include imaging tests, sports injury rehabilitation and after-hours care.</p>
+                        <img src="images/image-pediatric-mri.jpg" alt="Pediatric Center MRI Room">
+                        <p>Youngsters enjoy playing with kid-friendly technology including an interactive fish tank wall in the waiting room. A child-sized CT, known as a “kitten scanner,” helps alleviate their fear of medical tests by allowing them to “scan” an alligator, a robot and other toys. A soothing nautical theme, music and natural light also help keep things calm. 
+                        <br><br>The WellStar Pediatric Center is located at 1180 Barrett Parkway NW and is open seven days a week.</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="east-cobb-health-park">
+                        <img src="images/image-cobb-hero.jpg" alt="East Cobb Health Park" class="img-margin">
+                        <div class="article-title">
+                            <h2>Delivering Healthcare Where People Live and Work</h2>
+                        </div>
+                        <p>On September 15, 2014, WellStar proudly opened the doors of the new East Cobb Health Park, a one-stop-shop for healthcare and services. Patients can see their doctor, have tests performed and get prescriptions filled in one convenient, neighborhood setting. The park is located on Upper Roswell Road (Highway 120) two miles west of Johnson Ferry Road.  </p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/fpyl3lyVmlY?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>The three-story, 162,000-square-foot building houses primary and specialty physician offices as well as urgent care, laboratory services, rehabilitation therapy, a retail pharmacy and a café.  An outpatient surgery center is expected to open in mid-2015. 
+                        <br><br>
+                        Among physician specialties at the park are family medicine; ear, nose and throat; pediatrics; asthma and allergy; urology; neurosurgery; geriatrics; pain management; orthopedics and chiropractic care.</p>
+                        <img src="images/image-cobb-interior.jpg">
+                        <p>Patients praise the easy parking, welcoming environment and access to onsite testing and imaging. Physicians appreciate the opportunity to improve care by collaborating with other doctors. The East Cobb Community provided valuable input and suggestions throughout the planning process.
+                        <br><br>
+                        With outpatient care expected to grow more than 30 percent over the next five years, WellStar is committed to delivering quality healthcare where patients live and work. This is the second WellStar Health Park; the first opened in 2012 in Acworth.</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="breakthroughs">
+                        <h2 class="title-overlay">WellStar Celebrated a Year of Breakthroughs</h2>
+                        <img src="images/image-break-1.jpg" class="img-margin">
+                        <h3>Serving Our Children</h3>
+                        <p>Children are not small adults. They need specialized healthcare that meets their physical and emotional needs. The new WellStar Pediatric Center in Kennesaw provides just that, with innovative services intended to ensure that our children receive the care they need to enjoy long, productive lives. Our specially trained pediatric experts – including a radiologist, pediatricians, subspecialists, a supportive child life specialist and other caring team members – are dedicated to your child’s well-being. Child-friendly surroundings, prompt appointments, pediatric imaging and quick lab results make the center an essential community resource.</p>
+                        <h3>More Care for More Patients</h3>
+                        <p>WellStar Douglas Hospital moved into an expanded critical care services and intensive care unit, doubling ICU capacity. The project also included renovation and expansion of the hospital’s Emergency Department and added seven private rooms. The result is quicker, better care for the people of Douglas County and surrounding areas.</p>
+                        <img src="images/image-break-2.jpg">
+                        <h3>Healthy Approach to Technology</h3>
+                        <p>In its first full year of implementation, our new electronic patient record system is already delivering solid benefits. WellStar Connect, our implementation of the Epic® electronic health record software, provides a single source of information shared by all WellStar physician offices, outpatient facilities and hospitals. The system improves care and saves money by avoiding unnecessary tests and procedures. The online portal MyChart uses technology to let patients communicate directly with their doctors. </p>
+                        <h3>Cancer Commendation</h3>
+                        <p>The American College of Surgeons Commission on Cancer granted our cancer program a three-year accreditation with commendation, the highest level of achievement recognized by the commission. This prestigious designation is awarded to sites that exceed standard requirements. Our community-based, world-renowned oncologists offer the most advanced treatment available.</p>
+                        <h3>We've Got Heart</h3>
+                        <p>This year WellStar Kennestone Hospital was honored with Consumer Reports’ highest rating for heart surgery, the only Georgia hospital to receive this distinction. The score was based on four metrics, including survival rates, need for a second operation, best surgical techniques and medications. In fiscal year 2014, WellStar surgeons performed 655 cardiac surgeries, up from 543 the previous year. The WellStar Cardiac Network offers leading-edge care and has been recognized nationally for innovation and outcomes.</p>
+                        <img src="images/image-break-3.jpg">
+                        <h3>Breaking Away From the Pack</h3>
+                        <p>WellStar is passionate about being an employer of choice and our efforts were recognized widely in 2014. We were proud to be the highest-ranking Georgia business on the FORTUNE 100 Best Companies to Work For® list. WellStar was named a top company for executive women by the National Association of Female Executives. Working Mother magazine acknowledged our family-friendly policies by naming us one of their 100 Best Companies. As well, we were honored by AARP and the Society for Human Resource Management as one of the Best Employers for Workers Over 50.</p>
+                        <h3>Extending Our Reach</h3>
+                        <p>The Mayo Clinic Care Network collaboration is one of several notable partnerships forged this year. In addition, a joint venture with Piedmont Healthcare created a health insurance plan option that benefits community seniors and WellStar employees. As part of an ongoing relationship with Kennesaw State University, WellStar operates the student health clinics and supports student athletics, including KSU’s new football program. A clinical collaboration between WellStar Urgent Care Centers and select Walgreens Healthcare Clinics provides seamless, quality healthcare in a convenient way.</p>
+                        <img src="images/image-break-4.jpg">
+                        <h3>Transforming Health Through Innovation</h3>
+                        <p>This year, the Center for Health Transformation (CHT) fine-tuned its mission—to bring together not-for-profit health systems, universities and technology organizations to develop real-world health solutions through collaboration, research and innovation. A joint research project launched through the Georgia Tech Research Institute seeks ways to offer better care at lower costs. CHT serves as an incubator for promising new solutions to medical challenges here in northwest Georgia and beyond. As a Medicare Accountable Care Organization (ACO), WellStar contributed to a national savings of $370 million this year. ACOs are select providers charged with delivering exceptional, affordable care to Medicare patients. ACO participation requires medical staff to use innovative strategies to cut costs without compromising quality.</p>
+                        <h3>A Solid Foundation</h3>
+                        <p>While patient revenue lets us maintain high-quality care, it is the support from the communities we serve, through donations to the WellStar Foundation, that enables us to deliver world-class care. This year, contributions from employees, businesses and neighbors neared $5 million. These donations will help provide inpatient hospice care to those in need, fund a comprehensive stroke center, support the new WellStar Paulding Hospital, provide life-saving screenings, community health education and safety programs to those in need, and so much more.</p>
+                        <hr>
+                    </div>
+                </section>
+                
+                <section id="year-in-achievements" data-anchor="by-the-numbers">
+                	<h1>By The Numbers</h1>
+                    <p class="heading-quote">“More than just a sum of its parts, our connection with the community adds up.”</p> 
+                    
+                    <div class="subsection" data-anchor="community-outreach">
+                        <h2 class="title-overlay">Community Education & Outreach</h2>
+                        <p>We believe prevention and early detection provide the best approach to maintaining health and avoiding disease. That’s why we provide low- or no-cost health fairs, screenings and educational opportunities in a variety of settings to help improve the health and well-being of our community.</p>
+                        
+                        <div id="icons">
+                            <div class="icon-group flush-left people-icon-group">
+                                <img src="images/icon-people.png" class="no-fade" />
+                                <p><span>11,000</span><br>attendees at our<br><strong>Community Health Events</strong></p>
+                            </div>
+                            <div class="icon-group flush-right heart-icon-group">
+                                <img src="images/icon-heart.png" class="no-fade" />
+                                <p><span>14,000</span><br>participants in accident prevention<br>programs, including car seat safety inspections,<br>through our partnership with Safe Kids Cobb County</p>
+                            </div>
+                            <div class="icon-group flush-right heart-icon-group">
+                                <p class="text-block">160+ Community Health Fairs</p>
+                            </div>
+                            <div class="icon-group flush-left bandaid-icon-group">
+                                <img src="images/icon-bandaid.png" class="no-fade" />
+                                <p><span>62,000</span><br>students learned about important<br>health topics through our <strong>2,800</strong><br>School Health Program classes</p>
+                            </div>
+                            <div class="icon-group flush-left bandaid-icon-group">
+                                <p class="text-block">40+ Corporate Events &amp; Health Fairs</p>
+                            </div>
+                            <div class="icon-group flush-right shot-icon-group">
+                                <p class="text-block" style="margin-top: 0;">35+ CPR/First Aid Classes</p>
+                            </div>
+                            <div class="icon-group flush-right shot-icon-group">
+                                <img src="images/icon-shot.png" class="no-fade" style="clear: right;" />
+                                <p><span>10,000</span><br>individual screenings &amp; flu shots<br>were provided through our<br>Community Health Screenings</p>
+                            </div>
+                            <div class="icon-group flush-left helmet-icon-group">
+                                <img src="images/icon-helmet.png" class="no-fade"/>
+                                <p><span>6,000</span><br>pieces of equipment distributed, including<br>bike helmets, car seats, life jackets, reflectors,<br>& smoke/carbon monoxide detectors</p>
+                            </div>
+                            <div class="icon-group flush-left helmet-icon-group">
+                                <p class="text-block">20+ Advance Care Planning Workshops</p>
+                            </div>
+                            <div class="icon-group flush-right calendar-icon-group">
+                                <img src="images/icon-calendar.png" class="no-fade" />
+                                <p><span>77,000</span><br>people had access to health<br>information and services through our<br />health fairs and corporate events</p>
+                            </div>
+                            <div class="icon-group flush-right calendar-icon-group">
+                                <p class="text-block">150+ Speaking About Wellness Events</p>
+                            </div>
+                            <div class="icon-group flush-left case-icon-group">
+                                <img src="images/icon-case.png" class="no-fade" />
+                                <p><span>5,000</span><br>members in our <strong>Good Life Club</strong><br>for seniors</p>
+                            </div>
+                            <div class="icon-group flush-right church-icon-group">
+                                <img src="images/icon-church.png" class="no-fade" />
+                                <p><span>70</span><br>congregation partners through<br>our <strong>Congregational Health Network</strong></p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="care-and-stewardship">
+                    <h2>Caring for Those in Need</h2>
+                    <p>At WellStar, we are committed to caring for those in need throughout our community. For the past five years, we have provided more than $200 million per year in unreimbursed care. This year, 11 percent of all healthcare provided by WellStar was for those without insurance.</p>
+                    <div class="video-container" onclick="showNotificationArea();">
+                        <iframe width="830" height="467" src="https://www.youtube.com/embed/CspWV6ODUHM?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p>As the graph/infographic below illustrates, WellStar incurred costs of more than $110 million to provide charity care to patients in Bartow, Cherokee, Cobb, Douglas and Paulding counties in fiscal year 2014. Patients are deemed eligible for charity care, with no obligation to pay, according to state regulations and WellStar policy.
+                    <br><br>We also provided an additional $65 million to care for those who for various reasons did not apply for charity care, but were still unable to pay for services. Finally, our physicians and facilities made up a significant shortfall in reimbursements for patients on Medicaid ($25 million) and on Medicare ($98 million).</p>
+                    <div id="chart-container">
+                        <canvas id="chart" width="450" height="450"></canvas>
+                        <div class="chart-inner">
+                            <h1>$308mil</h1>
+                        </div>
+                        <div class="chart-info chart-care">
+                            <h1>$110,900,000</h1>
+                            <p>Charity Care</p>
+                        </div>
+                        <div class="chart-info chart-other">
+                            <h1>$65,400,000</h1>
+                            <p>Other Unreimbursed<br>Healthcare</p>
+                        </div>
+                        <div class="chart-info chart-medicaid">
+                            <h1>$25,500,000</h1>
+                            <p>Medicaid</p>
+                        </div>
+                        <div class="chart-info chart-medicare">
+                            <h1>$98,400,000</h1>
+                            <p>Medicare</p>
+                        </div>
+                        <div class="chart-info chart-community">
+                            <h1>$7,800,000</h1>
+                            <p>Community Programs</p>
+                        </div>
+                    </div>
+                    <div class="chart-legal">
+                        <p class="chart-legal-btn"><strong>For reporting purposes, WellStar follows federally mandated and other guidelines for patients.<br><span>READ MORE</span></strong></p>
+                    	<div class="chart-legal-details"><p>Indigent: Patients at or below 125 percent of the federal poverty level. Charity: Patients between 125 and 300 percent of the federal poverty level. Medicaid: A federal- and state-administered program providing access to care for certain low-income and/or disabled individuals. On average, Medicaid reimburses physicians, hospitals and other providers less than the cost of care. For 2013, the U.S. Census Bureau defined the federal poverty level as $11,670 for an individual and $23,850 for a family of four.<br><br>*Source: Bureau of Labor Statistics (June 2013 data)</p></div>
+                    </div>
+                    <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="audited-financials">
+                        <h2>Audited Financials<br><span>Combined Balance Sheet</span></h2>
+                        <div id="financials-chart">
+                            <div class="financials-header">
+                                <span class="financials-year-title">FY 2014<br><span>in thousands</span></span>
+                                <span class="financials-year-title">FY 2013<br><span>in thousands</span></span>
+                            </div>
+                            
+                            <div class="financials-row">
+                                <span class="financials-category"><div class="icon-spreadsheet spreadsheet-expand"></div>Assets</span>
+                                <span id="assets-fy13" class="financials-year1">$0</span>
+                                <span id="assets-fy14" class="financials-year2">$0</span>
+                            </div>
+                            <div class="financial-details">
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Current Assets</p>
+                                    <p class="financial-details-value">349,385</p>
+                                    <p class="financial-details-value">453,631</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Assets Limited as to Use</p>
+                                    <p class="financial-details-value">800,487</p>
+                                    <p class="financial-details-value">694,344</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Property Plant & Equipment</p>
+                                    <p class="financial-details-value">919,062</p>
+                                    <p class="financial-details-value">1,116,877</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Other Assets</p>
+                                    <p class="financial-details-value">73,480</p>
+                                    <p class="financial-details-value">78,380</p>
+                                </div>
+                            </div>
+                            
+                            <div class="financials-row">
+                                <span class="financials-category"><div class="icon-spreadsheet spreadsheet-expand"></div>Liabilities & Net Assets</span>
+                                <span id="liabilities-fy13" class="financials-year1">$0</span>
+                                <span id="liabilities-fy14" class="financials-year2">$0</span>
+                            </div>
+                            <div class="financial-details">
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Current Liabilites</p>
+                                    <p class="financial-details-value">182,912</p>
+                                    <p class="financial-details-value">277,656</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Other Liabilites</p>
+                                    <p class="financial-details-value">211,281</p>
+                                    <p class="financial-details-value">292,419</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Long-Term Debt</p>
+                                    <p class="financial-details-value">504,195</p>
+                                    <p class="financial-details-value">495,842</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Net Assets</p>
+                                    <p class="financial-details-value">1,244,026</p>
+                                    <p class="financial-details-value">1,277,315</p>
+                                </div>
+                            </div>
+                            
+                            <div class="financials-row" style="padding-bottom: 23px;">
+                                <span class="financials-category"><div class="icon-spreadsheet spreadsheet-expand"></div>Funds to be Invested<br>&nbsp&nbsp&nbsp&nbsp in Programs & Services</span>
+                                <span id="combined-fy13" class="financials-year1">$0</span>
+                                <span id="combined-fy14" class="financials-year2">$0</span>
+                            </div>
+                            <div class="financial-details">
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Total Revenues</p>
+                                    <p class="financial-details-value">1,546,874</p>
+                                    <p class="financial-details-value">1,648,462</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title">Total Expenses</p>
+                                    <p class="financial-details-value">(1,475,927)</p>
+                                    <p class="financial-details-value">(1,560,734)</p>
+                                </div>
+                                <div class="financial-details-row" style="border-top: 1px dashed #e3dfee;">
+                                    <p class="financial-details-title" style="padding-left: 65px;">Revenues in Excess of Operating Expenses</p>
+                                    <p class="financial-details-value" style="width: 141px;">70,947</p>
+                                    <p class="financial-details-value">86,728</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title" style="text-align: left; line-height: 25px; padding-left: 65px;">Implementation Cost Associated with Systemwide EMR</p>
+                                    <p class="financial-details-value" style="width: 141px;">(3,714)</p>
+                                    <p class="financial-details-value">(38,253)</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title" style="padding-left: 65px;">Loss from Unusual Winter Storms</p>
+                                    <p class="financial-details-value" style="width: 141px;">-</p>
+                                    <p class="financial-details-value">(13,499)</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title" style="padding-left: 65px;">Organization Restructure Cost</p>
+                                    <p class="financial-details-value" style="width: 141px;">-</p>
+                                    <p class="financial-details-value">(5,541)</p>
+                                </div>
+                                <div class="financial-details-row">
+                                    <p class="financial-details-title" style="padding-left: 65px;">Investment Income and Other</p>
+                                    <p class="financial-details-value" style="width: 141px;">52,554</p>
+                                    <p class="financial-details-value">61,019</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="financials-blurb">
+                            <p>WellStar invested $303 million in facilities, equipment and information systems technology in FY 2014. In our five-year capital plan, we will re-invest $927 million.</p>
+                        </div>
+                        <hr>
+                    </div>
+                </section>
+                
+                <section id="community" data-anchor="our-patients">
+                    <h1>Our Patients</h1>
+                    <p class="heading-quote">“Stories, comebacks and healing moments –<br>both big and small.”</p>
+                    
+                    <!-- <div class="subsection" data-anchor="patient-story-1">
+                        <img src="images/stock-7.jpg" alt="Patient Photo" class="img-margin">
+                        <h2 class="patient-title">Trip Whitley's Story<br><span>Subhead Vel Massa Diam</span></h2>
+                        <p>Aliquam molestie consectetur gravida. Ut euismod lobortis venenatis. Nunc laoreet iaculis ipsum, id iaculis nisl gravida quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque eleifend ut tellus ut tincidunt. Sed finibus dolor venenatis vehicula rutrum. Duis vehicula tortor leo, viverra scelerisque magna ullamcorper sit amet. Curabitur viverra aliquet nunc id gravida. Cras porta ac erat eu venenatis. Vestibulum vulputate et magna ut sodales.
+                        <br><br>
+                        Integer tempus, leo ac hendrerit suscipit, odio odio molestie dui, dictum auctor orci nibh et justo. Curabitur elit tortor, sodales sit amet dictum eget, pulvinar a libero. Praesent ligula magna, dapibus vel tristique sodales, consectetur ut tellus. Etiam a nunc ac est auctor ornare. In dolor leo, cursus ut sagittis vel, rhoncus nec neque. Ut non mi quis erat laoreet efficitur a eu velit. Donec fermentum sapien eu dolor tempor facilisis. Praesent sed eros rhoncus, vulputate elit at, iaculis felis.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/jJ7RZWM-diI?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>Praesent vitae urna dolor. Vivamus feugiat ligula eget vehicula sodales. In non augue purus. Pellentesque auctor tincidunt egestas. Cras condimentum nisl a magna euismod, sit amet sodales massa facilisis. Etiam id nulla dolor. Sed sodales gravida libero in laoreet. Nulla non imperdiet nunc. Duis finibus sollicitudin sapien, eget elementum dolor porttitor eget. Ut non eros non eros dapibus laoreet et ut eros.
+                        <br><br>
+                        Ut pretium cursus dui, imperdiet sollicitudin enim. Nullam eleifend tortor ut urna feugiat, quis euismod nulla faucibus. Nullam sit amet nulla felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim dolor ut magna blandit, at elementum felis ullamcorper. Praesent faucibus efficitur dolor, sit amet lobortis ex tempor non. Maecenas accumsan lorem erat, in lobortis diam tristique vitae. Ut ex metus, dapibus vitae tempor sit amet, sollicitudin ac felis. Maecenas varius eros sit amet sagittis mattis. Cras at mattis justo.
+                        <br><br>
+                        Donec finibus venenatis consectetur. Suspendisse suscipit lorem vel ligula elementum ornare. Ut ultricies massa id felis vestibulum, nec imperdiet nisi dignissim. Proin faucibus orci ac mi porttitor, at semper neque tincidunt. Aenean risus leo, auctor eget facilisis sit amet, dignissim ac arcu. Cras sed turpis eget metus placerat viverra eu commodo nulla. Aliquam ut massa non turpis pretium egestas quis consequat elit. Vestibulum eu ultrices lorem, vitae dapibus est. Aenean nec consectetur arcu. Sed a suscipit nunc. Maecenas vel enim eu sapien fringilla vulputate non vitae enim. Sed posuere enim sed porttitor fermentum. Morbi dignissim velit quam, a porttitor leo dictum non.</p>
+                        <hr>
+                    </div> -->
+                    
+                    <div class="subsection" data-anchor="patient-story-2">
+                        <img src="images/image-patient-manley.jpg" alt="Patient Photo" class="img-margin">
+                        <h2 class="patient-title">Gina Manley's Story<br><span>Meet the Young Woman Who Strong-Armed Cancer</span></h2>
+                        <p>In February 2014, Gina Manley was taking a shower when she noticed a growth on her upper left arm. Although the 29-year-old Medicaid analyst had always stayed in shape, she was pretty sure that the enlargement was not a pumped-up bicep.
+                        <br><br>Gina’s primary doctor referred her to WellStar general surgeon Dr. Patrick Brannon. A biopsy revealed that Gina had a rare type of cancer known as a synovial sarcoma. “When I heard those words I was speechless,” recalls Gina. “I kept thinking, ‘OK, that’s just not right. Let’s redo this.’”</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/GNBT01ZxWvA?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>Gina’s parents were in the room when she received the diagnosis. Gina knew she had to stay strong for her mom and dad. Meanwhile, they were fighting back tears in order to protect their daughter.
+                        <br><br>Dr. Brannon recommended that Gina see his colleague, cancer surgeon Dr. Sahir Shroff. “When Dr. Shroff walked into the office he extended his hand and said, ‘Gina, you’re too young for this but everything’s going to be fine. We’re going to get through it.’” His compassionate approach helped put Gina at ease as she struggled with her new reality.</p>
+                        <h3>Preparing For the Worst</h3>
+                        <p>“Dr. Shroff prepared me for the worst-case scenario, telling me I might end up with significant weakening and a severe deformity in my upper arm.” Gina also learned that prior to surgery she would have to undergo radiation in order to shrink the tumor. During that first meeting Gina told Dr. Shroff there was something else she wanted him to know.
+                        <br><br>“I told him I had tickets for the Beyoncé concert on July 15 and really wanted to go.” Dr. Shroff assured Gina he would do everything to try and make it happen.
+                        <br><br>On July 8, Dr. Shroff and his team at WellStar Kennestone Hospital operated on Gina. “I came out with minimal scarring and I could use my arm a lot more than I thought. Within a couple of months I was able to lift weights and do push ups!”
+                        <br><br>As she regains her busy, active life Gina is exceedingly grateful to the WellStar medical team. “Sure, I would have preferred to never go through this,” she says. “But I’ve grown to accept and appreciate what I’ve been through. It’s been a bumpy ride but I wouldn’t trade it for anything.” 
+                        <br><br>And the Beyoncé concert? You bet Gina was there—sling and all!</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="patient-story-3">
+                        <img src="images/image-patient-shaffer.jpg" alt="Patient Photo" class="img-margin">
+                        <h2 class="patient-title">Ross Shaffer's Story<br><span>Tiny Broken Bone Presents a Big Challenge</span></h2>
+                        <p>Spend a few minutes with Ross Shafer, 27, and you feel like you’ve known him for years. Ross, a professional bartender from Vinings, has the open, friendly personality typical of those in his profession.
+                        <br><br>About seven years ago, Ross purchased a motorcycle and enjoyed commuting on two wheels. “I was always very careful but on an October night in 2011 as I was leaving work I hit a patch of oil and lost control of the bike.” Although the accident occurred at slow speed, Ross fell on his right arm and hand, breaking the tiny scaphoid bone in his wrist.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/-prtobC52fM?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>Ross visited a surgeon who explained that the bone was very difficult to repair. Surgery would involve inserting a screw to hold the bone together while it healed.
+                        <br><br>“I wondered if I should get another opinion,” Ross recalls. “One concern was that a screw in my wrist might could keep me from ever throwing a baseball again." 
+                        <br><br>His next stop was the office of WellStar hand surgeon, Dr. Craig Weil. Says Ross, “The minute I walked in, there was a feeling of warmth and welcome. Dr. Weil agreed that surgery was an option, but he also discussed the possibility of letting the broken bone heal on its own.” Although Ross knew that it would not be a quick fix, he liked the idea of letting nature take its course.
+                        <br><br>Over the next several months, Ross made great progress and the tiny bone was nearly healed. Unfortunately, that progress was reversed when Ross was involved in an automobile accident caused by a driver who ran a red light. The wrist re-fractured. “At that point, Dr. Weil told me we had to go after this hard so in March 2012, I had my first surgery to set the bone,” says Ross. 
+                        <br><br>About 10 months later, Dr. Weil inserted a bone graph to promote healing. Finally, in 2013, he performed a final bone graph and added another screw. 
+                        <br><br>It’s been a long haul. But thanks to Dr. Weil’s expertise and Ross’s positive attitude, he is free of pain and is starting to throw a baseball again. Ross adds, “I never expected to achieve this range of motion. I feel better than ever. Dr. Weil was there for me from the beginning to the end.”</p>
+                        <hr>                        
+                    </div>
+                    
+                    <div class="subsection" data-anchor="patient-story-4">
+                        <img src="images/image-patient-larsons.jpg" alt="Patient Photo" class="img-margin">
+                        <h2 class="patient-title">The Larsons' Story<br><span>This Couple Definitely Has Each Other’s Back</span></h2>
+                        <p>Kristen and Bryan Larson have shared a lot in 23 years of marriage. But they never imagined that they would share the experience of back surgery.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/GX1Z5h4LnNs?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                     	<p>Their story begins in September 2013 when a lifting injury left Bryan, 49, with severe pain in his arms and numbness in his fingers. An orthopedic physican prescribed medication and physical therapy.
+						<br><br>“But it just wasn’t getting better,” Bryan recalls. Further testing indicated two herniated, or bulging disks. Herniation results from the loss of the cushiony, soft center of the disks that make up the spine. Bryan was referred to WellStar spinal surgeon Dr. Ali Mortazavi who confirmed that surgery to remove the damaged disks and fuse the spine was the only option. Bryan was surprised to learn that, left untreated, the problem disks could cause paralysis.
+						<br><br>“I can’t say enough good things about Dr. Mortazavi,” says Bryan. “He answered two full pages of my questions, so that I knew exactly what to expect.” On a Wednesday morning in February 2014, Bryan underwent surgery at WellStar Cobb Hospital. He was home by Friday and soon returned to work as a sales representative and even to the gym.</p>
+                        <h3>All in the Family</h3>
+                        <p>A couple of months after Bryan’s symptoms surfaced, Kristen, a 46-year-old artist, started to experience “a horrible, stabbing pain down my leg.” It got so bad that at times she was forced to crawl up the stairs of the couple’s Marietta home. 
+						<br><br>“Because of what I’d seen with Bryan I wanted to cut to the chase and get some answers,” says Kristen. That meant meeting with Dr. Mortazavi who confirmed that damaged lower back disks were pressing on her nerves and causing the leg pain. Dr. Mortazavi also discovered compressed neck disks resulting in serious balance problems. 
+						<br><br>“Six weeks to the day after my husband’s operation, I entered Cobb Hospital for my neck surgery,” says Kristen. A second successful surgery was completed to address the back. Today Kristen is feeling great.
+						<br><br>Both Larsons were delighted with the care at Cobb Hospital and enormously grateful to Dr. Mortazavi and his team. Echoing Bryan’s feelings, Kristen says, “At the end of the day, the surgery was the greatest thing I’ve ever done for myself.”</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="patient-story-5">
+                        <img src="images/image-patient-gunnels.jpg" alt="Patient Photo" class="img-margin">
+                        <h2 class="patient-title">Jesse Gunnels' Story<br><span>“Wow. You Guys Actually Saved My Life.”</span></h2>
+                        <p>“I was never really afraid. I knew I’d be alright no matter what happened.” Jesse (“Al”) Gunnels, 64, credits his faith for keeping him calm during a heart attack as he worked at home on a Friday morning in August 2014. And he credits his WellStar Douglas Hospital team for saving his life.
+                        <br><br>Al, a Douglasville software entrepreneur, woke up with a slight tightness in his chest. He assumed it was indigestion and didn’t worry much about it. After all, Al was a fit, active person with no family history of heart disease.
+                        <br><br>But the discomfort worsened. “The pain and numbness started moving into my shoulders and arm and I broke out into a cold sweat.” Al called his wife Robin who was out shopping and asked her to hurry home. He took a couple of aspirin as the couple headed to the hospital.
+                        <br><br>Fast forward to the WellStar Douglas Hospital emergency department where an EKG revealed blocked arteries and a heart attack in progress. “One of the emergency doctors put his hand on my shoulder and told me not to be alarmed. He said there would be lots of people moving around quickly but that I would be fine.” Al needed to hear those reassuring words.</p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/kDLcSGnJ0eA?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Just 39 Minutes</h3>
+                        <p>WellStar cardiologist Dr. Salvatore Mannino inserted stents to treat the four blockages. Stents are small, expandable tubes that open the arteries, permitting blood to flow freely. Al remained fully conscious the entire time.
+						<br><br>Just 39 minutes elapsed between the Gunnels’ arrival at the hospital and the completion of the procedure. “I felt better immediately; the pain was gone,” Al says. “When I thanked the team they said they were just doing their jobs. “I said, ‘It may be your job, but it’s my life you saved and I appreciate it!’”
+						<br><br>Al had nothing but praise for Dr. Mannino and all those who cared for him during his three-day hospital stay. “The nurses genuinely cared about how my wife and I were doing. And they took the time to help me understand the science behind what had happened.”
+						<br><br>Today, Al is back to kayaking and running after the grandkids and looks forward to a spring 2015 retirement. “I couldn’t be more pleased with my care and how things have worked out,” he says.</p>
+                        <hr>
+                    </div>
+                </section>
+                    
+                <section id="leadership" data-anchor="leadership">
+                    <h1>Leadership</h1>
+                    <p class="heading-quote">“The right talent from the right industries,<br>guiding our every step.”</p>
+                    
+                    <div class="subsection" data-anchor="our-board">
+                        <h2>WellStar Board of Trustees<br />
+                        <span>2013 - 2014</span></h2>
+                        <img src="images/photo-board.jpg"></img>
+                        <div class="board-names">
+                            <h1>Left to Right</h1>
+                            <p>T. Fitz Johnson; Robert N. Cross, M.D.; Steven W. Oweida, M.D.; Jeffrey Tharp, M.D.;
+                            <br>Avril Beckford, M.D.; David Hafner, M.D.; Randall Bentley, Sr.; Otis Brumby III;
+                            <br>Janie Maddox, Chair; Charles J. Jones; Gary A. Miller, Vice Chair; T.E. “Rusty” Durham;
+                            <br>Shan Cooper; Thomas E. Gearhard, M.D.; Tom Phillips; W. Allen Separk;
+                            <br>Walter G. Robinson; Frank Ros</p>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="senior-leaders">
+                        <h2>Senior Leadership</h2>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/jnADQcSiazA?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="leadership-row">
+                            <div class="leadership-container">
+                                <img src="images/photo-anderson.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>David Anderson</h2>
+                                        <p>Executive Vice President, Human Resources, Oganizational Learning & Chief Compliance Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-andrews.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Michael Andrews,<br>M.D.</h2>
+                                        <p>Chief Cancer Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-beckford.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Avril Beckford,<br>M.D.</h2>
+                                        <p>Chief Pediatrics Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-benedict.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>William Benedict,<br>M.D.</h2>
+                                        <p>Co-Chief Neuroscience Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leadership-row">
+                            <div class="leadership-container">
+                                <img src="images/photo-breshears.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Ryan Breshears,<br>M.D.</h2>
+                                        <p>Chief Behavioral Health Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-brywczynski.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Joe Brywczynski</h2>
+                                        <p>Senior Vice President, Health Parks Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-budzinski.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Jim Budzinski</h2>
+                                        <p>Executive Vice President & Chief Financial Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-busbee.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Perry "Chip"<br>Busbee, M.D.</h2>
+                                        <p>Chief Obstetrics & Gynecology Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leadership-row">
+                            <div class="leadership-container">
+                                <img src="images/photo-corey.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Barbara Corey</h2>
+                                        <p>Senior Vice President, Managed Care</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-diehl.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Mark Diehl, M.D.</h2>
+                                        <p>Co-Chief Musculoskeletal Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-haney.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Mark Haney</h2>
+                                        <p>Senior Vice President & WellStar Paulding Hospital President</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-hormes.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Joseph Hormes,<br>M.D.</h2>
+                                        <p>Co-Chief Neuroscience Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leadership-row">
+                            
+                            <div class="leadership-container">
+                                <img src="images/photo-jennings.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Reynold J.<br>Jennings</h2>
+                                        <p>Chief Executive Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-jungblut.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Peter R.<br>Jungblut, M.D.</h2>
+                                        <p>Senior Vice President & Medical Director, WellStar Medical Group</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-lundy.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Douglas Lundy,<br>M.D.</h2>
+                                        <p>Co-Chief Musculoskeletal Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="leadership-container">
+                                <img src="images/photo-mangel.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Barry Mangel,<br>M.D.</h2>
+                                        <p>Chief Cardiology Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leadership-row">
+                            
+                            <div class="leadership-container">
+                                <img src="images/photo-mayfield.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>William Mayfield,<br>M.D.</h2>
+                                        <p>Chief Surgial Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-menefee.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Kim Menefee</h2>
+                                        <p>Senior Vice President, Strategic Community Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-morris.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Jon Morris, M.D.</h2>
+                                        <p>Senior Vice President & Chief Information Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="leadership-container">
+                                <img src="images/photo-mullins.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Kem Mullins</h2>
+                                        <p>Senior Vice President & President of WellStar Cobb & Windy Hill Hospitals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leadership-row">
+                            
+                            <div class="leadership-container">
+                                <img src="images/photo-muster.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Alan Muster,<br>M.D.</h2>
+                                        <p>Chief Pulmonary Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-owens.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Craig Owens</h2>
+                                        <p>Senior Vice President & WellStar Douglas Hospital President</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-reichert.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Leo Reichert</h2>
+                                        <p>Executive Vice President & General Counsel</p>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="leadership-container">
+                                <img src="images/photo-saunders.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Candice Saunders</h2>
+                                        <p>President & Chief Operating Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leadership-row">
+                            
+                            <div class="leadership-container">
+                                <img src="images/photo-tharp.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Jeffrey Tharp,<br>M.D.</h2>
+                                        <p>Chief Medicine Division Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-trupiano.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Tony Trupiano</h2>
+                                        <p>Senior Vice President, Supply Chain</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leadership-container">
+                                <img src="images/photo-woods.jpg" alt="Senior Leadership" class="photo-leadership">
+                                <div class="leadership-overlay">
+                                    <div class="leadership-info">
+                                        <h2>Dan Woods</h2>
+                                        <p>Senior Vice President & WellStar Kennestone Hospital President</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </section>
+                        
+                    
+                <section id="foundation" data-anchor="foundation">
+                    <h1>Foundation</h1>
+                    <p class="heading-quote">“Philanthropy, support, vision and foresight,<br>working for our community.”</p>
+                
+                	<div class="subsection" data-anchor="patient-testimonial">
+                        <h2>Stroke of Luck and a Second Chance at Life</h2>
+                        <p>Ask typical teens what comes to mind when they hear the word stroke and you’ll get answers like “old people,” “dying” or “paralyzed.” Ask 18-year-old John Cothran the same question and you’ll hear the words “miracle” and “second chance.” That’s because the unthinkable happened to John. Two years ago, at age 16, he suffered a major stroke.
+                        <br><br>How major? So major that few people imagined this vibrant, athletic Woodstock High School sophomore would see his 17th birthday. </p>
+                        <div class="video-container" onclick="showNotificationArea();">
+                            <iframe width="830" height="467" src="https://www.youtube.com/embed/x_NLnpr7Acg?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>“On December 3, 2012, a buddy and I were working out at LA Fitness in Woodstock. My head started hurting really badly so I asked my friend to drive me to WellStar Urgent Care in Towne Lake.” There, Dr. Carlos Garcia recognized the signs of a possible stroke and sent John by ambulance to WellStar Kennestone Hospital. 
+						<br><br>Tests confirmed that John had suffered a stroke due to the rupture of a tangle of abnormal blood vessels known as an arteriovenous malformation (AVM). When the pressurized vessels burst, they caused potentially fatal bleeding in John’s brain. 
+						<br><br>WellStar neurosurgeon Dr. Ahmad Khaldi performed emergency surgery to remove a piece of his skull to make room for his rapidly swelling brain. John’s mom Carey recalls, “The operating room nurses kept coming out with messages from Dr. Khaldi telling us John was okay.”</p> 
+						<img class="no-fade photo-cothran" src="images/photo-cothran.jpg" alt="John Cothran">
+                        <p>Over the next four months, John’s condition was fragile as his brain healed enough to permit the AVM to be removed. He suffered constant headaches and required a great deal of rest. After weighing the options, the family decided on surgical removal of the vessels. Although the risk of death was low, the possibility that John would lose his sight was high.</p>
+                        <br>
+                        <p>“After more than 10 hours of surgery, Dr. Khaldi came out to tell us he had been successful,” says Carey. But would there be lasting damage to John’s ability to speak, walk and see? No one could know for sure. The next day as John emerged from the sedation, Dr. Khaldi urged him to give a thumbs up. To everyone’s delight John extended his right hand and grabbed Dr. Khaldi’s.
+						<br><br>That was the beginning of a painstaking but dramatic recovery. “Dr. Khaldi is truly the smartest person I’ve ever known,” says Carey. “The support and friendship he and the nurses on the ICU floor extended to John and our family were incredible. They never treated him like a helpless victim.” 
+						<br><br>John graduated on time with his classmates and is currently a freshman at Kennesaw State University, and a recipient of the HOPE Scholarship. Inspired by his WellStar caregivers, he has set his sights on a career as a physician’s assistant. John acknowledges that he’s regained more than physical abilities. He’s also acquired insight. “In the past I’d never say ‘I love you’ to my mom. Now, anytime I can, I tell her I love her and my family so much.”
+						<br><br>Thanks to his friend, John’s own quick thinking, the extraordinary WellStar neuroscience team and the prayers of all who love him, John can anticipate a full and vibrant future. He’ll be the first to tell you that he’s gotten a second chance at life.</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="lifetime-donors">
+						<h2>WellStar Foundation<br>Lifetime Donors</h2>
+                        <p>WellStar Foundation is grateful to the following generous donors whose cumulative lifetime gifts of $100,000 or more have made a significant impact on the healthcare of those around us.
+                        <br><br>Because of their support of WellStar Health System’s efforts to provide total family world-class care close to home, WellStar can continue to improve access to care and find innovative ways to meet the healthcare needs of the communities we serve.</p>
+                        <div id="lifetime-donors">  
+                            <div class="two-column"><p>Abbott Laboratories</p><p>Art Plumbing Company</p><p>Bank of America Merrill Lynch</p><p>Batchelor & Kimball, Inc.</p><p>BB&T</p><p>Brasfield & Gorrie General Contractors</p><p>Bristol-Myers Squibb</p><p>Mr. and Mrs. Bernard L. Brown, Jr.</p><p>William Michael Brown, M.D.</p><p>Anonymous</p><p>Raymond M. Cash Foundation</p><p>CDH Partners, Inc.</p><p>Kay and Bill Chegwidden</p><p>Ms. Linda A. Clark</p><p>Cobb County Medical Society </p><p>& Cobb County Medical Society Alliance</p><p>Cobb EMC Membership Service</p><p>Coca-Cola Refreshments, Inc.</p><p>The Community Foundation for Greater Atlanta, Inc.</p><p>Cork-Howard Construction Company</p><p>Mr. John J. Elliott, Jr.</p><p>James L. Fisher, M.D.</p><p>Mrs. Carolyn P. Flowers</p><p>Georgia Power Foundation, Inc.</p><p>Green & Sapp, LLP</p><p>DPR Hardin Construction Company</p><p>Anonymous</p><p>Hill-Rom Co., Inc.</p><p>The O.C. Hubert Charitable Trust</p><p>Inglett & Stubbs, Inc.</p><p>The Walter and Doris Johnson Foundation</p><p>Estate of George Henry Keeler</p></div>
+                            <div class="two-column"><p>Susan G. Komen for the Cure </p><p>- Greater Atlanta Affiliate</p><p>Despina Kutelis Estate</p><p>Ms. Alivia K. Lipson</p><p>Lockheed Martin Aeronautics Company</p><p>Ms. Mary M. Manning</p><p>McKesson Provider Services</p><p>Medline Industries, Inc.</p><p>Linda and Ed Milligan</p><p>Northwest Georgia Oncology Centers</p><p>Dr. and Mrs. David L. Parks</p><p>Mr. and Mrs. Neal C. Peavey, Sr.</p><p>Tom and Betty Phillips</p><p>Lil and Bob Prillaman </p><p>Quantum Physician Services, LLC </p><p>- Quantum Radiology, P.C. </p><p>Quest Diagnostics</p><p>Eileen and Sam Reeves Estate</p><p>Mrs. Betty Ann Rhodes Estate</p><p>Rotary Club of Marietta Metro</p><p>S.A.White Oil Company and The Gresh Family</p><p>Margaret L. Scarbrough Estate</p><p>Mr. W. Allen Separk</p><p>Dr. and Mrs. Gregory L. Simone</p><p>Carol and Kessel Stelling</p><p>Norman and Regina Goldsworthy Stott </p><p>Mr. Leonard H. Taylor Estate</p><p>Tip Top Poultry, Inc.</p><p>Ms. Mary Hodges Turner</p><p>WellStar Hospital Volunteers</p><p>Mr. and Mrs. John A. Williams</p><p>Mr. and Mrs. Jim Willoughby</p></div>
+                        </div>
+                        <hr style="clear:both;" />
+                        
+                    </div>
+                    
+                    <div class="subsection" data-anchor="generous-donors">
+                        <h2>Compassion. Healing. Hope.</h2>
+                        <p>The WellStar Foundation partners with generous individuals, corporations and organizations to ensure WellStar Health System has the resources necessary to bring world-class care to our community.
+						<br><br>WellStar Foundation is truly grateful to the many donors who have supported WellStar with gifts of $500 or more during this past fiscal year from <strong>July 1, 2013 – June 30, 2014:</strong></p>
+                        <div id="other-donors">
+                            <div class="top-donors" id="donors-legend">
+                                <p class="donor-level"><span>Legend</span> $1,000,000 or greater</p>
+                                <p class="donor-name">Anonymous</p>
+                            </div>
+                            
+                            <div class="top-donors" id="donors-visionary">
+                                <p class="donor-level"><span>Visionary</span> $500,000 to $999,999</p>
+                                <p class="donor-name">Estate of Mr. and Mrs. Sam D. Reeves</p>
+                            </div>
+                            
+                            <div class="top-donors" id="donors-pioneer">
+                                <p class="donor-level"><span>Pioneer</span> $250,000 to $499,999</p>
+                                <p class="donor-name">WellStar Kennestone Hospital Volunteers</p>
+                            </div>
+                            
+                            <div id="donors-accordion">
+                                <h3><span>Philanthropist</span> $100,000 to $249,000</h3>
+                                <div class="accordion">
+                                    <div class="two-column"><p>Susan G. Komen for the Cure<br>- Greater Atlanta Affiliate</p></div>
+                                    <div class="two-column"><p>WellStar Cobb Hospital Auxiliary</p></div>
+                                </div>
+                                <h3><span>Catalyst</span> $50,000 to $99,999</h3>
+                                <div class="accordion">
+                                        <div class="two-column"><p>W. Lamar Cousins, M.D.</p><p>Edward and Leslie Himot</p><p>Dr. and Mrs. David L. Parks</p></div>
+                                        <div class="two-column"><p>Art and Robin Ragsdale Family</p><p>WellStar Douglas Hospital Auxiliary</p></div>
+                                </div>
+                                <h3><span>Benefactor</span> $25,000 to $49,999</h3>
+                                <div class="accordion">
+                                    <div class="two-column"><p>ApolloMD Business Services, LLC</p><p>Brasfield & Gorrie General Contractors</p><p>Arthur W. and Joanne Fudger</p><p>Mrs. Elaine Lane</p><p>Aymar and Judy Manning</p><p>Northwest Georgia Oncology Centers</p></div>
+                                    <div class="two-column"><p>Tom and Betty Phillips</p><p>Mr. and Mrs. Alan R. Shipp</p><p>WellStar Paulding Hospital Auxiliary</p><p>WellStar Windy Hill Hospital Volunteers</p></div>
+                                </div>
+                                <h3><span>Leader</span> $10,000 to $24,999</h3>
+                                <div class="accordion">
+                                    <div class="two-column"><p>William and Eloise Adams</p><p>Carol V. Aebersold and Christa A. Pitts</p><p>Art Plumbing Company</p><p>Bank of America Merrill Lynch</p><p>Bank of North Georgia</p><p>Batchelor & Kimball, Inc.</p><p>Bikers Battling Breast Cancer</p><p>Snookie and Bernie Brown</p><p>Mr. and Mrs. Jim Budzinski</p><p>Carithers Flower Shop, Inc.</p><p>Charles and Maureen Carithers</p><p>Carlyle Fraser Employees Benefit Fund</p><p>CDH Partners, Inc.</p><p>Chamberlin Edmonds, an Emdeon Company</p><p>Cobb & Douglas Public Health</p><p>Coca-Cola Refreshments, Inc.</p><p>Lee and Gene Cork</p><p>Cork-Howard Construction Company</p><p>Downey & Cleveland, LLP</p><p>Emdeon</p><p>Fire Ministries - East-West Church</p></div>
+                                    <div class="two-column"><p>Genuine Parts Company/NAPA</p><p>Anonymous</p><p>Dr. and Mrs. Joseph T. Hormes</p><p>Inglett & Stubbs, Inc.</p><p>Barbara and Lance LoRusso</p><p>MDJ Community Foundation</p><p>MembersFirst Credit Union</p><p>MetroAtlanta Ambulance Service</p><p>Mobilized Fuels, Inc.</p><p>Parker, Hudson, Rainer & Dobbs, LLP</p><p>Presidio</p><p>Quantum Radiology, P.C.</p><p>Estate of Betty Ann Rhodes</p><p>Richardson Technology Systems</p><p>Rotary Club of East Cobb</p><p>S.A.White Oil Company and The Gresh Family</p><p>Softchoice Corporation</p><p>Mr. Robert Thompson</p><p>TransAmerica</p><p>UBS Financial Services, Inc.</p><p>Anonymous</p><p>Wheeler High School Football Booster - Class of ‘73</p></div>
+                                </div>
+                                <h3><span>Advocate</span> $5,000 to $9,999</h3>
+                                <div class="accordion">
+                                    <div class="three-column"><p>Active Network</p><p>Air Methods</p><p>Drs. Sharon and Greg Amaya</p><p>W. Ray Barnes</p><p>Mr. and Mrs. Thomas A. Barrow, III</p><p>Batson-Cook Company</p><p>BB&T</p><p>Sam and Candie Bishop</p><p>Ford and Shannon Bohannon</p><p>Dr. and Mrs. Perry Busbee, III</p><p>Carol and Bill Callaway</p><p>Dr. and Mrs. Brett H. Cannon</p><p>City of Marietta/Board of Lights and Water</p><p>Cobb EMC Community Foundation, Inc.</p><p>Ms. Patricia A. Cohen</p><p>Community & Southern Bank</p><p>Annie and Randy Cook</p><p>Mr. and Mrs. Jim Crawford</p><p>Mr. and Mrs. Donald E. Davidson</p><p>Mrs. Gloria A. Davis</p><p>Dixon Hughes Goodman, LLP (DHG Healthcare)</p><p>Dr. Tom and Christie Emerson</p><p>Epic</p><p>Pamela and Darold Etheridge</p><p>First Landmark Bank</p></div>
+                                    <div class="three-column"><p>Lea and David Fisher</p><p>Mr. and Mrs. David Franks</p><p>Gas South, LLC</p><p>Georgia Power Company - Metro West Region</p><p>Green & Sapp, LLP</p><p>GreyStone Power Corporation</p><p>Dr. and Mrs. M. Felton Hagood</p><p>Hall, Booth, Smith, PC</p><p>Dr. and Mrs. Evans M. Harrell</p><p>Hogan Construction Group</p><p>Impact Advisors LLC</p><p>It’s The Journey, Inc.</p><p>Dr. and Mrs. Robert D. Jansen</p><p>JE Dunn Construction</p><p>Kimley-Horn and Associates, Inc.</p><p>Mrs. Gail C. King</p><p>Knox Electrical Contractors, Inc.</p><p>Lanier Parking Solutions</p><p>LM Aero Club - Employees Reaching Out Club</p><p>Lockheed Martin Aeronautics Company</p><p>Lockton Companies, LLC</p><p>LoRusso Law Firm PC</p><p>M. J. Harris Construction Services, LLC</p><p>Marietta Neurology & Headache Center</p></div>
+                                    <div class="three-column"><p>Lockheed Martin Aeronautics Company</p><p>Lockton Companies, LLC</p><p>LoRusso Law Firm PC</p><p>M. J. Harris Construction Services, LLC</p><p>Marietta Neurology & Headache Center</p><p>Martin General Contracting, Inc.</p><p>Mark P. McLaughlin, M.D.</p><p>Meadows & Ohly, LLC</p><p>Medline Industries, Inc.</p><p>Anonymous</p><p>A. S. Mitchell Foundation</p><p>Moore, Ingram, Johnson & Steele, LLP</p><p>Owen & Associates, Inc.</p><p>Piedmont WellStar HealthPlans</p><p>Prime Power Services, Inc.</p><p>Puckett E.M.S., Inc.</p><p>Mr. and Mrs. Steven K. Puckett</p><p>Resurgens orthopedics</p><p>Rotary Club of Marietta Metro</p><p>Mr. and Mrs. Garvis L. Sams, Jr.</p><p>Schneider Electric North America Foundation</p><p>Welch Allyn</p><p>Dr. Scott and Emily Wottrich</p></div>
+                                </div>
+                                <h3><span>Mentor</span> $2,500 to $4,999</h3>
+                                <div class="accordion">
+                                    <div class="three-column"><p>AmeriSource Bergen</p><p>Dr. and Mrs. Michael Andrews</p><p>Argos USA </p><p>Tracey and Jeff Atwater</p><p>BB&T Cobb Commercial Lending Group</p><p>Dr. William J. Benedict, Jr.</p><p>Boston Scientific Corporation</p><p>Bottom Line Systems, Inc</p><p>Mr. and Mrs. Tony W. Britton</p><p>Mr. Paul A. Broyles</p><p>Mr. and Mrs. Otis A. Brumby, III</p><p>Mr. and Mrs. Dan Buyers</p><p>Dr. Don and Paula Campbell</p><p>Cardno ATC</p><p>Anonymous</p><p>Arun Chervu, M.D.</p><p>Indira Chervu, M.D.</p><p>Mr. and Mrs. Kenneth H. Cole</p><p>Mark and Barbara Corey</p><p>Dr. and Mrs. Charles Crabbe</p><p>Dr. and Mrs. Robert N. Cross</p><p>Marcia L. Delk, M.D. and D. Charles Payne</p><p>Deloitte</p><p>Mr. W. Earle Dodd, III</p><p>Ms. Susan J. Doty</p><p>Elarbee Thompson</p><p>EMC Corporation</p><p>Epic Response</p><p>Marla J. Franks, M.D.</p><p>Galloway & Associates, Inc.</p><p>Garrett McNatt Hennessey </p><p>& Carpenter 360 (GMHC360)</p></div>
+                                    <div class="three-column"><p>Dr. and Mrs. G. Waldon Garriss</p><p>Drs. Thomas and Mary Gearhard</p><p>Gregory, Doyle, Calhoun,  & Rogers, LLC</p><p>Dr. and Mrs. Tony A. Griffith, Jr.</p><p>Jill and Brian Henderson</p><p>Lynda and Morris Henderson</p><p>Mr. and Mrs. James R. Hewatt</p><p>Hewlett-Packard</p><p>Harriet and Larry Hinds</p><p>Dr. and Mrs. Allen Hoffman</p><p>Drs. Noel and Carol Holtz</p><p>Rhonda and Mark Jacobson</p><p>John Thornton Chevrolet</p><p>Kell Touchdown Club</p><p>Dr. and Mrs. Daniel Kleinman</p><p>KPMG, LLP</p><p>Kronos Incorporated</p><p>Kenneth Kunze, M.D.</p><p>Dr. Robert Lubitz and Dr. Judy Monroe</p><p>Mackas Evans, Inc.</p><p>Dr. and Mrs. Ellis L. Malone</p><p>Karen and Barry Mangel, M.D.</p><p>Marietta Recycling Corporation</p><p>Brenda Marino-Fuller, M.D.</p><p>McCarthy Building Companies, Inc.</p><p>Dr. and Mrs. Thomas McNamara</p><p>Janet P. Memark, M.D.</p><p>Vanchad R. Memark, M.D.</p><p>Mindpower Incorporated</p></div>
+                                    <div class="three-column"><p>Mr. and Mrs. John H. Moore</p><p>Mr. Kevin Moore</p><p>Morgan Stanley Global Impact </p><p>Funding Trust</p><p>Dr. and Mrs. Michael Mull</p><p>Dr. and Mrs. Alan R. Muster</p><p>Vimala Nair, M.D.</p><p>Vijay J. Nath, M.D.</p><p>Mr. Harold C. Noll, Jr.</p><p>Mr. and Mrs. John Oltman</p><p>Dr. Donald and Mrs. Joan Page</p><p>Ganesh P. Pandya, M.D.</p><p>Dr. Chirag H. Patel and Dr. Toral Fadia</p><p>Hitendra Patel, M.D.</p><p>Dr. and Mrs. Guillermo Pierluisi</p><p>Mr. Van G. Price</p><p>Purchasing Power</p><p>Quantix</p><p>Siemens Building Technologies</p><p>Dr. and Mrs. Alaa Soltan</p><p>SuccessFactors</p><p>Sunbelt Printing & Graphics</p><p>SunTrust Banks, Inc.</p><p>Dr. and Mrs. Jeffrey L. Tharp</p><p>Dr. William W. Thoms, Jr.</p><p>Triad Isotopes</p><p>Tuxedo Glass & Mirror Co., Inc.</p><p>Dr. and Mrs. Joel R. Wachs</p><p>Felicia and Steven Wagner</p><p>Sandy and Hugh White</p><p>Willis Insurance</p><p>Dr. David and Karlyn Zimmerman</p></div>
+                                </div>
+                                <h3><span>Fellow</span> $1,000 to $2,499</h3>
+                                <div class="accordion">
+                                    <div class="four-column"><p>7 Hills Fire Protection Co., Inc.</p><p>Access Information Mangement</p><p>Valery A. Akopov, M.D.</p><p>Albion Scaccia Enterprises, LLC</p><p>Mr. and Mrs. Glenn H. Allen</p><p>Ragheed Alturkmani, M.D.</p><p>Mrs. Alexis Amaden</p><p>Ms. Sheri Amante  and Mr. Adam Missner</p><p>Amerigroup</p><p>Mary Lee and David Anderson</p><p>Mr. Russ Ardillo</p><p>Varah Jan Awtrey</p><p>Ayco Charitable Foundation</p><p>Mr. and Mrs. Todd J. Bailey</p><p>Ms. Barbara G. Ballard</p><p>Ms. Ellen C. Barnes</p><p>Mrs. Darcy T. Barrett</p><p>Dr. and Mrs. Antonio V. Baute</p><p>Dr. Avril Beckford and Dr. Lawrence Rowley</p><p>Ms. Vickie J. Beckler</p><p>Mr. Keith F. Bilyeu</p><p>Ms. Ana M. Blanco</p><p>Mr. and Mrs. Douglas M. Bodenhamer</p><p>Dr. and Mrs. Gerald W. Bortolazzo</p><p>Ms. Wendy Brantley</p><p>Wesley R. Bray, M.D.</p><p>Mr. Johnnie B. Booker</p><p>Ms. Sarah G. Brown</p><p>Sharon and Joe Brywczynski</p><p>Ms. Jane F. Bunn</p><p>Mr. Stephen J. Byrne</p><p>C.L. Burks Construction</p><p>Dr. Laura Caramanica</p><p>John B. Chastain, M.D.</p><p>Coventry Health Care of Georgia, Inc.</p><p>Jonathan Y. Chen, D.O.</p><p>Mrs. Patricia P. Chilton</p><p>Mr. Russ Clayton</p><p>Club of Hearts - GA Power </p><p>& Southern Company</p><p>Cobb EMC Membership Service</p><p>Mr. Eugene P. Cofield, III</p><p>Stephen and Terri Cole</p><p>Mr. Robert D. Collins</p><p>Mrs. Cheryl Colton</p><p>Mrs. Shan Cooper</p><p>Croy Engineering, LLC</p><p>Dr. Despina and Mr. Shawn Dalton</p><p>Ms. Debra L. Daly</p><p>Mr. Bruce Dean</p></div>
+                                    <div class="four-column"><p>Misty and Bobby DeCoux</p><p>Dr. Betty Dorman</p><p>Dr. and Mrs. William Dowdell</p><p>Ms. Cori W. Dukes</p><p>Maria D’Alessandro and Ray Dukes</p><p>Mrs. Dot H. Dunaway</p><p>Melanie and James Duncan</p><p>Mr. Brandon Dunn</p><p>Mr. Christopher B. Durham</p><p>Family Savings Credit Union</p><p>Mrs. Lesly B. Fant</p><p>Mrs. Linda S. Faulkner</p><p>Mr. and Mrs. Steven W. Fisher</p><p>Linda J. Flournoy</p><p>Mr. and Mrs. Daniel K. Ford</p><p>Gilbane Building Company</p><p>Carl Goolsby, Jr., M.D.</p><p>Judge Adele P. Grubbs</p><p>Mr. and Mrs. Martin L. Gutkin</p><p>Andrea Hall and Andy Gilberg</p><p>Deborah and Joe Hamby</p><p>Vickie and Mark Haney</p><p>Ms. Lynn M. Hanks</p><p>Justin P. Hart, M.D.</p><p>Mrs. Kathe Hayter and </p><p>Mr. Wayne Neal</p><p>Ms. Erica Hecht</p><p>Patty and Robert Hermann</p><p>Mr. and Mrs. James J. Hills</p><p>Mr. and Mrs. Steven Hilton</p><p>Dr. Yousef and Rana Hindi</p><p>Ms. Vicky L. Hogue</p><p>Drs. Daniel and Maggie Holtz</p><p>Holy Transfiguration Greek </p><p>Orthodox Church</p><p>Home Depot</p><p>Mr. and Mrs. Clark F. Hungerford</p><p>Mr. and Mrs. Billy M. Hutson</p><p>Dr. and Mrs. Lynn J. Hyland</p><p>S. Lark Ingram</p><p>Insley & Race, LLC</p><p>Ivan Allen Workspace</p><p>J. R. Nichols Co., Inc.</p><p>Mrs. Anita S. Johnson</p><p>Mr. and Mrs. David E. Johnson</p><p>Mr. David V. Johnson</p><p>Mr. and Mrs. Steve A. Johnson</p><p>The Joint Commission</p><p>Mr. and Mrs. Charles J. Jones</p></div>
+                                    <div class="four-column"><p>Peter Jungblut, M.D.</p><p>Mohammad Kamran, M.D.</p><p>Mr. and Mrs. Christopher Kane</p><p>Mr. Mak Kawano</p><p>Mr. and Mrs. Fred R. Keith</p><p>Dr. George and Stefanie Kramer</p><p>Drs. Gunter and Sharon Kurrle</p><p>Maureen Lamm, M.D.</p><p>Mr. and Mrs. Lynn Lanier</p><p>Lefkoff, Rubin, Gleason & Russo, P.C.</p><p>Kit and Lou Little</p><p>Mr. and Mrs. Joseph Lombino</p><p>Mrs. Elizabeth H. Loudermilk</p><p>Mr. and Mrs. Victor Macias</p><p>John and Janie Maddox</p><p>Alan Maloon, M.D.</p><p>Bob and Julie Mandler</p><p>Ms. Amanda Marshall</p><p>Christina A. Martin</p><p>Ms. Beth A. Masters</p><p>Mauldin & Jenkins</p><p>Ms. Patricia A. Mayne</p><p>Ms. Chiquita L. McCullough</p><p>Mr. and Mrs. Tom McEachern</p><p>McElroy Specialty Interiors</p><p>Mr. and Mrs. Tate McKee, III</p><p>McWhirter Realty Partners</p><p>Mr. Joseph Medico</p><p>Kim and Chris Menefee</p><p>Mrs. Bonnie Miller</p><p>Mr. and Mrs. David K. Miller</p><p>Bonnie and Gary Miller</p><p>Mrs. Kelly S. Miller</p><p>Dr. and Mrs. Prashant Mishra</p><p>Ms. Martha W. Moore</p><p>Mrs. Mitzi Smith Moore</p><p>Mrs. Lisa Mulkey</p><p>Mr. Kem Mullins</p><p>Ms. Nancy L. Murray</p><p>Mrs. Cheryl P. Musial</p><p>Mr. John H. O’Neill, III</p><p>John R. Oltman Private Foundation</p><p>A.J. Orquia, M.D.</p><p>Dr. and Mrs. Steven W. Oweida</p><p>Mr. Craig Owens</p><p>Mr. and Mrs. Barry Parks</p><p>Dhaval G. Patel, M.D.</p><p>Mr. Michael G. Paul</p><p>PriceWaterhouseCoopers, LLP</p></div>
+                                    <div class="four-column"><p>Mike and Tricia Pridemore</p><p>Quest Diagnostics</p><p>Ms. Janice Ranger</p><p>Millie and Bill Reddick</p><p>William T. Redwood, M.D.</p><p>Ms. Rosalyn E. Reed</p><p>Mr. and Mrs. Leo E. Reichert</p><p>Medel A. Reyes, M.D.</p><p>Rock-Tenn Company</p><p>Mrs. Deborah Roegge De Vita</p><p>Mr. and Mrs. Frank Ros</p><p>Mrs. Sybil P. Sams</p><p>Mr. and Mrs. Don Saunders</p><p>Mr. and Mrs. C. Brett Scullen</p><p>Mr. W. Allen Separk</p><p>The Sherwin Williams Company</p><p>SimplexGrinnell / Tyco Fire & Safety</p><p>Ms. Doris Sims</p><p>James S. Smeltzer, M.D.</p><p>M. Sharon Smith, Ed. D.</p><p>Mr. Preston Smith</p><p>Mr. Roy E. Smith</p><p>Southeastern Paper Group Atlanta</p><p>Dr. and Mrs. Robert Stephens</p><p>Structor Group, Inc.</p><p>Mr. James M. Swartz</p><p>Dr. Richard Tavernaro and </p><p>Mrs. Mary Louise Tavernaro</p><p>Taylor English Duma LLP</p><p>Teknacon Inc./Andrea Hall and </p><p>Andy Gilberg</p><p>Nick Tilacos</p><p>Ms. Margaret Torres</p><p>Trader Joe’s Buckhead</p><p>Mr. and Mrs. Anthony M. Trupiano</p><p>Turner Construction Company</p><p>Mr. James C. Underwood, Jr.</p><p>Mr. and Mrs. Donald VanLoo</p><p>Vinings Bank</p><p>Mr. Jay Wallace</p><p>Mr. and Mrs. Gene Weeks</p><p>Mr. Joe Wheeler</p><p>Mrs. Tena Williams</p><p>Dr. and Mrs. Robin Wilson</p><p>Witt, Kieffer, Ford, Hadelman, Lloyd</p><p>Mr. and Mrs. Daniel J. Woods</p><p>Mr. and Mrs. David Wyatt</p><p>Mrs. Susan H. Wyatt</p><p>Mrs. William F. Young, Jr.</p></div>
+                                </div>
+                                <h3><span>Colleague</span> $500 to $999</h3>
+                                <div class="accordion">
+                                    <div class="four-column"><p>Ms. Margaret C. Alleva</p><p>AllState Giving Campaign</p><p>Ms. Fiona Ashley</p><p>Ms. Lydia Aweh</p><p>Mrs. Betty Ayers</p><p>Mrs. Nancy Ballard</p><p>Mr. Jimmy W. Banks</p><p>Ms. Suzanne M. Barkley</p><p>Mr. Gary Barnett</p><p>Ms. Jessica L. Bedsole</p><p>Ms. Geraldine Belle</p><p>Benbrooke Partners, LLC</p><p>Ms. Susan E. Berrier</p><p>Ms. Francesca A. Berriman</p><p>Bethel Gardens</p><p>Ms. Kathy T. Betty</p><p>Mr. and Mrs. Allan Bishop</p><p>Ms. Allison R. Blank</p><p>Ms. Brenda Bleetan</p><p>BlueCross BlueShield of Alabama</p><p>Ms. Sherry Bond</p><p>Mr. and Mrs. David Bottoms</p><p>Ms. Betsy Brakovich</p><p>Judge and Mrs. G. Grant Brantley</p><p>Mrs. Laurie Brister</p><p>Mr. Charley Brown</p><p>Mr. and Mrs. Brian Buckalew</p><p>William E. Burak, M.D.</p><p>Ms. Talonda Burkes</p><p>Ms. Vallorie D. Butler</p><p>Ms. Cheryl M. Butterfield</p><p>Ms. Patricia L. Campbell</p><p>Ms. Dara L. Carroll</p><p>Mr. Albert Casanova-Diaz</p><p>Ms. Lydia Casteel</p><p>Ms. Rhetta V. Castillo</p><p>Ms. Kimberly G. Cate</p><p>Mr. and Mrs. Jeff Caudell</p><p>CBIZ, Inc.</p><p>Mr. Andrew J. Chambers</p><p>Ms. Jennifer Chambrin</p><p>Ms. Lisa Clements</p><p>Mr. and Mrs. Chris Coan</p><p>Richard W. Cohen, M.D.</p><p>Liz B. Cole, Ph. D.</p><p>Mrs. Holly Comer Tuchman</p><p>Chanicer Cooks</p><p>Ms. Holly Cornetti</p><p>Ms. Melissa Cornwell</p><p>Ms. Karen I. Crawford</p><p>Mr. William C. Crew</p><p>Lisa and Christopher Crossman</p><p>Rev. and Mrs. Bryan E. Crute</p><p>Ms. Kayla E. Curtis</p><p>Ms. Dayin K. Cusick</p><p>Ms. Miriam C. Davies</p><p>Ms. Eleanora Davis</p><p>Ms. Jacqueline Davis</p><p>John DerCola,PA-C</p><p>Destiny Metropolitan Worship Church</p><p>Ms. Jacqueline M. Dotson</p><p>Mr. Bolan Dreher</p></div>
+                                    <div class="four-column"><p>Mr. Alfred W. Droms</p><p>Mr. and Mrs. T.E. “Rusty” Durham, Jr.</p><p>Dr. Kathie Elliott</p><p>Dr. and Mrs. James M. Elsbree</p><p>Dr. and Mrs. Ben Epstein</p><p>Mr. Christopher T. Eubanks</p><p>Ms. Marcia C. Evans</p><p>Ms. Pamela Farrell</p><p>Mrs. Nicole Faulk and Mr. Eric Snell</p><p>Ms. Jessica Fields</p><p>Mr. Ford Harrison</p><p>Mr. and Mrs. William N. Foree, Jr.</p><p>Mr. Steven Fraime</p><p>Ms. Vickie H. Frederiksen</p><p>Ms. Angela W. Gaddis</p><p>Ms. Michelle M. Garner</p><p>Mr. Donald K. Gentry</p><p>Ms. Laura K. Girguis</p><p>Ms. Marcia D. Goodwill</p><p>Mrs. Kathryn E. Green</p><p>C. Shane and Carla C. Greene</p><p>Kristyn M. Greifer, M.D.</p><p>Ms. Megan M. Groover</p><p>Mr. Timothy J. Gutenberger</p><p>Ms. Lilia C. Hagler</p><p>Mr. Andrew D. Hall</p><p>Mr. and Mrs. Samer Hamde</p><p>Mr. Ivan Q. Hamilton</p><p>Ms. Teresa R. Hamilton</p><p>Mr. Todd A. Hamilton</p><p>Ms. Evelyn A. Hammond</p><p>DPR Hardin Construction Company</p><p>Mr. Jeremy Harmon</p><p>Ms. Mary H. Harmon</p><p>Ms. Kimberly D. Hartley</p><p>Ms. Jillian M. Hartsfield</p><p>Mr. Michael S. Hebdon</p><p>Ms. Kathryn Henley</p><p>Ms. Robbie L. Hernandez</p><p>Ms. Renee J. Hightower</p><p>Ms. Florene E. Hill</p><p>Mr. Paul Hogan</p><p>Mr. Steve E. Holcombe</p><p>Ms. Jan E. Holland</p><p>Mr. James M. Holloway</p><p>Ms. Carolyn L. Hoover</p><p>Ms. Calandra Howard</p><p>Ms. Marie Howe</p><p>HPD Engineers</p><p>Ms. Julie S. Hunker</p><p>Kati and Kevin Hyland</p><p>Indian Hills Country Club</p><p>Mr. and Mrs. Robert D. Ingram</p><p>Ms. Sharon Irons</p><p>Isaiah 58 Foundation</p><p>Frankie and Charles Jackson</p><p>Ms. Susan M. Jackson</p><p>Mr. Chester V. Jara</p><p>Ms. Nicole Jarrell</p><p>Ms. Caroline C. John</p></div>
+                                    <div class="four-column"><p>Ms. Chenille L. Jones</p><p>Ms. Jennifer F. Jones</p><p>Mrs. Carole J. Kell</p><p>Ms. Michelle Kellett</p><p>Ms. Kathleen V. Kilgore</p><p>Richard J. Kleiman, M.D.</p><p>Ms. Janis Kleinberger</p><p>Dr. and Mrs. John D. Knox</p><p>Ms. Beth Kost</p><p>Mr. Rich Kracum</p><p>Dr. Andrew H. Krantz</p><p>Mr. Dean M. Krontz</p><p>Mr. Richard Kulik</p><p>Ms. Sherron Kurtz</p><p>Ms. Pamela B. Landers</p><p>Ellen and Ken Langford</p><p>Ms. Barbara A. Latten</p><p>Ms. Linda H. Lawrence</p><p>Ms. Debbie D. Lee</p><p>Ms. Linda M. Lee</p><p>Ms. Lorene LeFevre</p><p>Lighting Technologies</p><p>Mr. Maurice Linares</p><p>Ms. Barbara Burnette Lusk</p><p>Mr. Kevin B. Mair</p><p>R. L. Manzelli</p><p>Mr. and Mrs. Ted Marcus</p><p>Pam Marquess</p><p>Ms. Patricia A. Marshall</p><p>Ms. Susan M. Martin</p><p>Ms. Veronica Martin</p><p>Ms. Melinda Masters</p><p>Joe, Jeanne, Linda and Jake Maurer</p><p>Mr. Paul Mayberry</p><p>Ms. Melinda McDonald</p><p>Mr. Steve Medved</p><p>Mrunalee Mehta, M.D.</p><p>Mercer</p><p>Ms. A. Michelle Miller</p><p>Mr. Derrick E. Minson</p><p>Mr. David Mirolli</p><p>Ms. Barbara R. Montaldi</p><p>Eva Y. Montgomery-McGuire, M.D.</p><p>Mr. Richard Moore</p><p>Mr. and Mrs. Pete Moraitakis</p><p>Ms. Regina R. Morgan</p><p>Dr. Jon and Toni Morris</p><p>Mr. and Mrs. Michael E. Motes</p><p>Ms. Danette L. Murner</p><p>Ms. Mary A. Murphy</p><p>Ms. Michelle K. Musgrave</p><p>Ms. Debra Naderhoff</p><p>Ms. Cindy E. Newman</p><p>NorthStar Church</p><p>Ms. Patti W. Oakes</p><p>Kim and Michael Paris</p><p>Mr. Jim Parker</p><p>Ms. Andrea M. Parson</p><p>Pat Cahill Productions</p><p>Ms. Kimberly Penn</p><p>Ms. Tiffany D. Perry</p><p>Dr. and Mrs. Joe M. Phillips, Jr.</p><p>Ms. Linda P. Philpot</p><p>Ms. Kelly D. Poulter</p><p>Mrs. Lou Ann Pressell</p></div>
+                                    <div class="four-column"><p>Ms. Charla J. Price</p><p>Mr. Richard A. Pylant</p><p>R. F. Knox Co, Inc.</p><p>Ms. Tatanisha V. Reddick</p><p>Mrs. Lindsay A. Rehn</p><p>Ms. Donna L. Rhoades</p><p>Mr. James L. Rhoden, Jr.</p><p>Ms. Sally Rhoden</p><p>Mr. Rustan J. Ricks</p><p>Ms. Amina Rifay</p><p>Ms. Amy B. Riley</p><p>Ms. Bethany Robertson</p><p>Mr. and Mrs. Quinton Robinson</p><p>Ms. Melanie S. Rogers</p><p>Mrs. Lynn D. Rosario</p><p>Ms. Patricia M. Rosser</p><p>Ms. Evelyn Sacks and Mr. Cary Rodin</p><p>Mrs. Carol Scoggins</p><p>Mrs. Pamela M. Shank</p><p>Mr. Chris Shaw</p><p>Mrs. Nancy Shelly</p><p>Ms. Pamela H. Shields</p><p>Mr. Rick Siegel</p><p>Ms. Tenna Sines</p><p>Ms. Angielene E. Smith</p><p>Ms. Shelley D. Smith</p><p>Mr. and Mrs. James D. Southerland</p><p>Spectrum Surgical Instruments/</p><p>Steris Speciality Services</p><p>Mrs. Sheryl L. Spohn</p><p>Ms. Janet R. St. Martin</p><p>Dr. and Mrs. Irving Staley</p><p>Ms. Eunice L. Stauffer</p><p>Mrs. Laika B. Steiger</p><p>Ms. Amy Stevenson</p><p>Mr. Dwight T. Still</p><p>Nancy and Ron Straughan</p><p>Mr. and Mrs. Dan Styf</p><p>Ms. Mary H. Taylor</p><p>Ms. Stephanie Taylor</p><p>Ms. Ethel Teal</p><p>Ms. Jennifer N. Terry</p><p>Amy and Rick Thomas</p><p>Sonya D. Thompson, M.D.</p><p>Ms. Cynthia Tingle</p><p>Tip Top Poultry, Inc.</p><p>Ms. Lucy Todd</p><p>Ms. Patricia L. Torres</p><p>Triage Consulting Group</p><p>Ms. Stacey L. Tribble</p><p>Mrs. Holly Comer Tuchman</p><p>Ms. Jan P. Turk</p><p>Peggy and Sheldon Tyndall</p><p>Ms. Jill E. Uhl</p><p>Ms. Jennifer M. Valbuena</p><p>Mr. Carmelo Vecchio</p><p>Ms. Cecelia Wagoner</p><p>Mr. and Mrs. Reed Weigle</p><p>Whitlock Inn</p><p>Ms. Jackie O. Wiggins</p><p>Ms. Vickie E. Williamson</p><p>Ms. Susan Woodhall</p><p>Ms. Ilona Wozniak</p><p>Mr. Steven M. Ziffer</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </section>
+                          
+                <section id="get-involved" data-anchor="get-involved">
+                    <h1>Get Involved</h1>
+                    <p class="heading-quote">“Making a purposeful impact is easier than you’d imagine.”</p>
+                    
+                    <div class="subsection" data-anchor="donate">
+                        <h2>Donate Now</h2>
+                        <p>Whether you make a one-time donation or pick your own program designation, your generous gift is critical to WellStar’s vision of delivering world-class healthcare. Click below to give today.</p>
+                        <div class="btn-donate"><a href="https://ssl.4agoodcause.com/wellstar/donate1.aspx"  target="_blank"></a></div>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="follow">
+                        <h2>Follow Us</h2>
+                        <p>Stay up-to-date with us on social. Pick your favorite networks and follow us to make sure you don’t miss a thing.</p>	
+                        <div class="social-wrapper">
+                            <div class="icon-social icon-facebook"><a href="https://www.facebook.com/wellstarhealthsystem"  target="_blank"></a></div>
+                            <div class="icon-social icon-twitter"><a href="https://twitter.com/WellStarHealth"  target="_blank"></a></div>
+                            <div class="icon-social icon-youtube"><a href="https://www.youtube.com/user/WellStarHealthSystem"  target="_blank"></a></div>
+                            <div class="icon-social icon-instagram"><a href="https://instagram.com/wellstarhealth"  target="_blank"></a></div>
+                            <div class="icon-social icon-linkedin"><a href="https://www.linkedin.com/company/wellstar-health-system"  target="_blank"></a></div>
+                        </div>
+                        <div class="email-wrapper">
+                            <p>Enter your email address to join our mailing list:</p>
+                            <form method="post">
+                                <fieldset>
+                                    <input id="email" type="email" name="email" placeholder="Email Address" title="Email Address" />
+                                    <br>
+                                    <input id="submit" type="submit" value="Submit" />
+                                </fieldset>
+                            </form>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <div class="subsection" data-anchor="share">
+                   		<h2>Spread the Word</h2>
+                        <p>Share our Community Report with your friends and family, and help us build a better network of neighbors.</p>
+                        <div class="share-wrapper">
+                            <div class="btn-social btn-facebook"><a class="facebook popup" href="https://www.facebook.com/share.php?u=https://www.wellstar.org/community"></a></div>
+                            <div class="btn-social btn-twitter"><a class="twitter popup" href="https://twitter.com/share?text=I%20just%20read%20@WellStarHealth's%202014%20Community%20Report,%20check%20it%20out!"></a></div>
+                            <div class="btn-social btn-linkedin"><a class="linkedin popup" href="https://www.linkedin.com/cws/share?url=https://www.wellstar.org/community"></a></div>
+                        </div>
+                        <div class="download-wrapper">
+                            <p>And download a copy<br>to keep for yourself.</p>
+                            <div class="btn-download"><a href="WellStar Community Benefits Report 2014.pdf" download></a></div>
+                        </div>
+                        
+                        <div class="footer">
+                        <p>Copyright © 2014 WellStar Health System.<br>All Rights Reserved.</p>
+                        <a href="https://www.wellstar.org"><img class="no-fade" src="images/logo-wellstar-small.png" alt="WellStar Logo"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>    
+        </div>
+	</body>
+</html>
